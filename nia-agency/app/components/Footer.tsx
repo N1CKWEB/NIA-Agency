@@ -1,7 +1,8 @@
 "use client";
 
 import { Linkedin, Instagram, Mail } from "lucide-react";
-import logoNia from "figma:asset/a0dec4aee6345afe3e96a93a53b2c5ef0a444376.png";
+import niaIcon from "../../public/assets/icon.png";
+import Image from "next/image";
 
 export function Footer() {
   const scrollToSection = (id: string) => {
@@ -18,10 +19,10 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center">
-              <img
-                src="C:/NIA-Agency/nia-agency/app/Frame 1.png"
+              <Image
+                src={niaIcon}
                 alt="NIA Logo"
-                className="h-10 sm:h-12 w-auto"
+                className="h-10 sm:h-12 w-auto mb-2"
               />
             </div>
             <p className="text-gray-400 text-xs sm:text-sm">

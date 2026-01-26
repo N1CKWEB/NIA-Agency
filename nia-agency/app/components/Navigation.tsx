@@ -3,11 +3,19 @@
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import niaIcon from "../public/assets/niaIcon.png";
+import niaIcon from "../../public/assets/icon.png";
+import { useSearchParams, useRouter, usePathname } from "next/navigation";
 
 export function Navigation() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const router = useRouter();
+  const handleCalendly = () => {
+    router.push(
+      "https://calendly.com/nicolasdiazgarrido649/reunion?source=landing_nia",
+    );
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -74,7 +82,10 @@ export function Navigation() {
           </div>
 
           {/* Desktop CTA Button */}
-          <button className="hidden md:block bg-cyan-400 hover:bg-cyan-500 text-gray-900 px-4 lg:px-6 py-2 lg:py-2.5 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/50 text-sm lg:text-base">
+          <button
+            className="hidden md:block bg-cyan-400 hover:bg-cyan-500 text-gray-900 px-4 lg:px-6 py-2 lg:py-2.5 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/50 text-sm lg:text-base"
+            onClick={handleCalendly}
+          >
             Agendar demo
           </button>
 
