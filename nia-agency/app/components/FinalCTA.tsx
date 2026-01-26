@@ -1,6 +1,16 @@
+"use client";
+
 import { ArrowRight, Sparkles } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export function FinalCTA() {
+  const router = useRouter();
+
+  const handleCalendly = () => {
+    router.push(
+      "https://calendly.com/nicolasdiazgarrido649/reunion?source=landing_nia",
+    );
+  };
   return (
     <section className="relative py-16 sm:py-20 md:py-24 bg-gradient-to-b from-[#0a0e27] to-[#0f1435] overflow-hidden">
       {/* Background effects */}
@@ -28,18 +38,20 @@ export function FinalCTA() {
 
           {/* CTA Button */}
           <button className="group bg-cyan-400 hover:bg-cyan-500 text-gray-900 px-8 sm:px-12 py-3.5 sm:py-5 rounded-xl font-bold text-base sm:text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-400/50 hover:-translate-y-1 inline-flex items-center gap-2 sm:gap-3">
-            <span className="break-words">Agendá tu llamada estratégica</span>
-            <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform flex-shrink-0" />
+            <span className="wrap-break-word" onClick={handleCalendly}>
+              Agendá tu llamada estratégica
+            </span>
+            <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform shrink-0" />
           </button>
 
           {/* Trust indicators */}
           <div className="mt-8 sm:mt-10 pt-8 sm:pt-10 border-t border-white/10 flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4 sm:gap-8 text-xs sm:text-sm text-gray-400">
             <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-cyan-400 rounded-full flex-shrink-0"></div>
+              <div className="w-2 h-2 bg-cyan-400 rounded-full shrink-0"></div>
               <span>Sin compromiso</span>
             </div>
             <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-violet-400 rounded-full flex-shrink-0"></div>
+              <div className="w-2 h-2 bg-violet-400 rounded-full shrink-0"></div>
               <span>Respuesta en 24hs</span>
             </div>
             <div className="flex items-center gap-2">
