@@ -7,7 +7,7 @@ export function FinalCTA() {
   const router = useRouter();
 
   const handleCalendly = () => {
-    router.push("https://calendly.com/niaagency6/30min?source=landing_nia");
+    router.push("https://calendly.com/niaagency6/reunion?source=landing_nia");
   };
   return (
     <section className="relative py-16 sm:py-20 md:py-24 bg-gradient-to-b from-[#0a0e27] to-[#0f1435] overflow-hidden">

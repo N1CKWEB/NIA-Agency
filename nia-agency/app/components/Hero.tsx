@@ -10,9 +10,7 @@ export function Hero() {
   const router = useRouter();
 
   const handleCalendly = () => {
-    router.push(
-      "https://calendly.com/nicolasdiazgarrido649/reunion?source=landing_nia",
-    );
+    router.push("https://calendly.com/niaagency6/reunion?source=landing_nia");
   };
   return (
     <section className="relative min-h-screen bg-[#0a0e27] overflow-hidden">

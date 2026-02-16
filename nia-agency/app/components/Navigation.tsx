@@ -12,7 +12,7 @@ export function Navigation() {
 
   const router = useRouter();
   const handleCalendly = () => {
-    router.push("https://calendly.com/niaagency6/30min?source=landing_nia");
+    router.push("https://calendly.com/niaagency6/reunion?source=landing_nia");
   };
 
   useEffect(() => {
